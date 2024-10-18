@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1729243092 source:d:\csdn\test\3\main.c
+	<stdlib.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
