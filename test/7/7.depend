@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1729660075 source:d:\csdn\test\7\main.c
+1729663300 source:d:\csdn\test\7\main.c
+	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<string.h>
-	<stdio.h>
 	<stdlib.h>
 

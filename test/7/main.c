@@ -6,13 +6,13 @@ int main()
 {
     char ch[100];
     fgets(ch,100,stdin);
-    if(ch[0]!='\n')
+   if(ch[0]!='\n')
     {
-        printf("%s\n",ch);
+        printf("ÄãÊäÈëµÄÊÇ£º%s\n",ch);
     }
     else
     {
-        printf("Ã„Ã£ÃŠÃ¤ÃˆÃ«ÂµÃ„ÃŠÃ‡Â¿Ã•Â´Â®\n");
+        printf("ÄãÊäÈëµÄÊÇ¿Õ´®£¡\n");
     }
     return 0;
 }*/
@@ -72,20 +72,20 @@ int main()
     outfile=fopen("scores.txt","w");
     if (outfile==NULL)
     {
-        printf("ä¸èƒ½åˆ›å»ºæ–‡ä»¶ï¼");
+        printf("²»ÄÜ´´½¨ÎÄ¼ş£¡");
         exit(0);
     }
-    fprintf(outfile,"å­¦å·\tå§“å\tå…¥å­¦æˆç»©\n");
+    fprintf(outfile,"Ñ§ºÅ\tĞÕÃû\tÈëÑ§³É¼¨\n");
     for(i=0;i<N;i++)
     {
-        printf("è¯·è¾“å…¥å­¦ç”Ÿå­¦å·ã€å§“åå’Œå…¥å­¦æˆç»©ï¼ˆç©ºæ ¼åˆ†å¼€ï¼‰:");
+        printf("ÇëÊäÈëÑ§ÉúÑ§ºÅ¡¢ĞÕÃûºÍÈëÑ§³É¼¨£¨¿Õ¸ñ·Ö¿ª£©:");
         scanf("%s%s%f",stuid,name,&score);
         fprintf(outfile,"%s\t%s\t%f\n",stuid,name,score);
     }
     fclose(outfile);
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     FILE * outfile;
@@ -104,7 +104,6 @@ int main()
     {
         perror("Error reading outfile");
     }
-
     fclose(outfile);
     return 0;
-}
+}*/
