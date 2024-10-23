@@ -12,7 +12,7 @@ int main()
     }
     else
     {
-        printf("��������ǿմ�\n");
+        printf("ÄãÊäÈëµÄÊÇ¿Õ´®\n");
     }
     return 0;
 }*/
@@ -60,3 +60,51 @@ int main()
     return 0;
 
 }*/
+/*#include<stdio.h>
+#include<stdlib.h>
+#define N 5
+int main()
+{
+    char stuid[10],name[20];
+    float score;
+    FILE * outfile;
+    int i;
+    outfile=fopen("scores.txt","w");
+    if (outfile==NULL)
+    {
+        printf("不能创建文件！");
+        exit(0);
+    }
+    fprintf(outfile,"学号\t姓名\t入学成绩\n");
+    for(i=0;i<N;i++)
+    {
+        printf("请输入学生学号、姓名和入学成绩（空格分开）:");
+        scanf("%s%s%f",stuid,name,&score);
+        fprintf(outfile,"%s\t%s\t%f\n",stuid,name,score);
+    }
+    fclose(outfile);
+    return 0;
+}*/
+#include<stdio.h>
+int main()
+{
+    FILE * outfile;
+    char line[100];
+    outfile=fopen("scores.txt","r");
+    if (outfile==NULL)
+    {
+        perror("Error opening outfile");
+        return 1;
+    }
+    while (fgets(line,sizeof(line),outfile))
+    {
+        printf("%s",line);
+    }
+    if(ferror(outfile))
+    {
+        perror("Error reading outfile");
+    }
+
+    fclose(outfile);
+    return 0;
+}
