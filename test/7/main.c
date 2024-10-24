@@ -107,3 +107,4 @@ int main()
     fclose(outfile);
     return 0;
 }*/
+#include<stdio.h>
