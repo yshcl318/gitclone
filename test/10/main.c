@@ -78,26 +78,36 @@ int main()
     if(x>=5&&x<=10)
     {
         printf("\n");
-        printf("第一位学生成绩:");
+        q:printf("第一位学生成绩:");
         scanf("%d",&y[1]);
         c=y[1];
         d=y[1];
-        if(y[i]>=90)
-                printf("分数:%d 等级:优\n",y[1]);
-            else if(y[i]>=80)
-                printf("分数:%d 等级:良\n",y[1]);
-            else if(y[i]>=70)
-                printf("分数:%d 等级:中\n",y[1]);
-            else if(y[i]>=60)
-                printf("分数:%d 等级:及格\n",y[1]);
-            else
+        if(y[i]>100||y[i]<0)
+        {
+            printf("错误信息，请重新输入\n");
+            goto q;
+        }
+        else if(y[i]>=90)
+            printf("分数:%d 等级:优\n",y[1]);
+        else if(y[i]>=80)
+            printf("分数:%d 等级:良\n",y[1]);
+        else if(y[i]>=70)
+            printf("分数:%d 等级:中\n",y[1]);
+        else if(y[i]>=60)
+            printf("分数:%d 等级:及格\n",y[1]);
+        else
                 printf("分数:%d 等级:不及格\n",y[1]);
         z=z+y[1];
         for(i=2;i<=x;i++)
         {
-            printf("第%d位学生成绩:",i);
+            arr:printf("第%d位学生成绩:",i);
             scanf("%d",&y[i]);
-            if(y[i]>=90)
+            if(y[i]>100||y[i]<0)
+            {
+                printf("错误信息，请重新输入\n");
+                goto arr;
+            }
+            else if(y[i]>=90)
                 printf("分数:%d 等级:优\n",y[i]);
             else if(y[i]>=80)
                 printf("分数:%d 等级:良\n",y[i]);
