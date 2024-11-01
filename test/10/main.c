@@ -213,7 +213,7 @@ int main()
     test(y,x);
     return 0;
 }*/
-#include <stdio.h>
+/*#include <stdio.h>
 #include <math.h>
 int main(){
 	printf("请输入学生的人数（5-10）：");
@@ -287,4 +287,5 @@ int main(){
 	printf("%d，",z[i]);
 }
 	return 0;
-}
+}*/
+
