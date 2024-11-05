@@ -67,7 +67,7 @@ int main()
     }
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     int a[6][5];
@@ -87,5 +87,5 @@ int main()
         }
     }
     return 0;
-}
+}/*
 
