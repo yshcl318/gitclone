@@ -17,9 +17,10 @@ int w(int i)
 
 int main()
 {
-    int i=0;
+    int i=0,n;
     float s=1,a,b;
-    while(i<10)
+    scanf("%d",&n);
+    while(i<n)
     {
         i++;
         a=q(i);
