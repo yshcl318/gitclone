@@ -1,4 +1,4 @@
-int q(int i)
+/*int q(int i)
 {
     if(i<=1)
         return 1;
@@ -30,5 +30,29 @@ int main()
         printf("%0.3f \n",b);
     }
     printf("%0.3f",s);
+    return 0;
+}*/
+#include<stdio.h>
+int main()
+{
+    int a=0,b=0,c=0,d=0,e=0,f=0;
+    char ch[100];
+    scanf("%s",ch);
+    for(int i=0;i<=100;i++)
+    {
+        if(ch[i]=='>'&&ch[i+1]!='=')
+            a++;
+        else if(ch[i]=='<'&&ch[i+1]!='=')
+            b++;
+        else if(ch[i]=='>'&&ch[i+1]=='=')
+            c++;
+        else if(ch[i]=='<'&&ch[i+1]=='=')
+            d++;
+        else if(ch[i]=='='&&ch[i+1]=='=')
+            e++;
+        else if(ch[i]=='!'&&ch[i+1]=='=')
+            f++;
+    }
+    printf("%d %d %d %d %d %d ",a,b,c,d,e,f);
     return 0;
 }
