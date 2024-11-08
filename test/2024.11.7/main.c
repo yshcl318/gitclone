@@ -21,7 +21,7 @@ int main()
     printf("%s\n",arr);
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     int a=0,i=0;
@@ -33,4 +33,43 @@ int main()
             a++;
     }
     printf("%d",a);
+}*/
+#define row 9
+#define col 9
+#define rows row+2
+#define cols col+2
+void menu(int i)
+{
+    printf("****************\n");
+    printf("**** 1.play ****\n");
+    printf("**** 0.exit ****\n");
+    printf("****************\n");
+}
+void game()
+{
+    char mine[rows][cols];
+    char show[rows][cols];
+}
+#include<stdio.h>
+int main()
+{
+    int i=0;
+    do
+    {
+        menu(i);
+        printf("请输入：");
+        scanf("%d",&i);
+        if(i==1)
+        {
+            game();
+        }
+        else if(i==0)
+        {
+            printf("退出游戏\n");
+            break;
+        }
+        else
+            printf("选择错误，请重新选择\n");
+    }while(i);
+    return 0;
 }
