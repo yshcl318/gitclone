@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -30,4 +31,35 @@ int main()
             }
 
     return 0;
+}*/
+/*#include<stdio.h>
+#define N 5
+#define S 30
+int main()
+{
+    int i,j;
+    for(i=1;i<=N;i++)
+    {
+        for(j=1;j<=S+N-i;j++)
+            printf(" ");
+        for(j=1;j<=2*i-1;j++)
+            putchar('A'+i-1);
+        printf("\n");
+    }
+    return 0;
+}*/
+#include<stdio.h>
+#define n 6
+#define s 30
+int main()
+{
+    int i,j;
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=s+i-1;j++)
+            printf(" ");
+        for(j=1;j<2*(n+1-i);j++)
+            putchar('A'+j-1);
+        printf("\n");
+    }
 }
