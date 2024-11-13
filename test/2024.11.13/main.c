@@ -1,4 +1,4 @@
-/*
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -22,7 +22,7 @@ int main()
                         g=z/100;
                         h=z/10%10;
                         i=z%10;
-                        if(a!=d&&a!=e&&a!=f&&a!=g&&a!=h&&a!=i&&b!=d&&b!=e&&b!=f&&b!=g&&b!=h&&b!=i&&c!=d&&c!=e&&c!=f&&c!=g&&c!=h&&c!=i&&d!=e&&d!=f&&d!=g&&d!=h&&d!=i&&e!=f&&e!=g&&e!=h&&e!=i&&f!=g&&f!=h&&f!=i&&g!=h&&g!=i&&g!=i)
+                        if(a!=d&&a!=e&&a!=f&&a!=g&&a!=h&&a!=i&&b!=d&&b!=e&&b!=f&&b!=g&&b!=h&&b!=i&&c!=d&&c!=e&&c!=f&&c!=g&&c!=h&&c!=i&&d!=e&&d!=f&&d!=g&&d!=h&&d!=i&&e!=f&&e!=g&&e!=h&&e!=i&&f!=g&&f!=h&&f!=i&&g!=h&&g!=i&&g!=i&&a!=0&&b!=0&&c!=0&&d!=0&&e!=0&&f!=0&&g!=0&&h!=0&&i!=0)
                         {
                             printf("%d %d %d\n",x,y,z);
                         }
@@ -31,7 +31,7 @@ int main()
             }
 
     return 0;
-}*/
+}
 /*#include<stdio.h>
 #define N 5
 #define S 30
@@ -64,6 +64,7 @@ int main()
         printf("\n");
     }
 }*/
+/*
 #include<stdio.h>
 int main()
 {
@@ -80,4 +81,4 @@ int main()
         l--;
     }
     return 0;
-}
+}*/
