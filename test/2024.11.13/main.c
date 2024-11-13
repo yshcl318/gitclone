@@ -48,6 +48,7 @@ int main()
     }
     return 0;
 }*/
+/*
 #include<stdio.h>
 #define n 6
 #define s 30
@@ -62,4 +63,21 @@ int main()
             putchar('A'+j-1);
         printf("\n");
     }
+}*/
+#include<stdio.h>
+int main()
+{
+    int i=0,j=0,n=0,k=0,l=0;
+    scanf("%d",&n);
+    l=n-1;
+    for(i=0;i<n;i++)
+    {
+        for(j=n-i-2;j>=0;j--)
+            printf(" ");
+        for(k=0;k<n-l;k++)
+            printf("*");
+        printf("\n");
+        l--;
+    }
+    return 0;
 }
