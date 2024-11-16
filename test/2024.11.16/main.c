@@ -189,7 +189,7 @@ int main()
     return 0;
 }
 */
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     int m=0,n=0,i=0,j=0,a=0,b=0,c=0,x=0,s=0;
@@ -200,6 +200,7 @@ int main()
     {
         scanf("%d",&m);
         aver=100.00/m;
+        s=0;
         for(j=0;j<m;j++)
         {
             scanf("%d%c%d%c%d",&a,&p,&b,&q,&c);
@@ -230,12 +231,63 @@ int main()
                         s++;
                 }
             }
-            else
-            {
-                s=s;
-            }
         }
         printf("%.2f\n",s*aver);
+    }
+    return 0;
+}*/
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int a,b,i=0,j=0,s[1000]={0},k=0;
+    while(scanf("%d",&a)==1)
+    {
+        for(i=0;i<1000;i++)
+            s[i]=0;
+        k=1;
+       if(a%2==0)
+       {
+           b=a/2;
+           for(i=1;i<=b;i*=2)
+                k++;
+           while(b>0)
+           {
+                j=1;
+                i=1;
+                while(i<=b)
+                {
+                    i*=2;
+                    j++;
+                }
+                b=b-i/2;
+                s[j]=1;
+           }
+       }
+       else
+       {
+           b=(a-1)/2;
+           for(i=1;i<=b;i*=2)
+                k++;
+           while(b>0)
+           {
+                j=1;
+                i=1;
+                while(i<=b)
+                {
+                    i*=2;
+                    j++;
+                }
+                b=b-i/2;
+                s[j]=1;
+           }
+           s[1]=1;
+       }
+       for(j=k;j>0;j--)
+       {
+           printf("%d",s[j]);
+       }
+       printf("\n");
     }
     return 0;
 }
