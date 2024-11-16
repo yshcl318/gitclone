@@ -1,4 +1,4 @@
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     long long a;
@@ -38,7 +38,7 @@ int main()
     }
     }
     return 0;
-}
+}*/
 /*#include<stdio.h>
 #include<string.h>
 char A[1000]={0};
@@ -74,3 +74,168 @@ int main(){
     return 0;
 }
 */
+/*#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int a,b,c,d,m,n,s,i=0,j=0;
+    char o,p,q;
+    while(scanf("%d%c%d%c%d%c%d",&a,&p,&b,&o,&c,&q,&d)==7)
+    {
+        if(o=='-')
+        {
+            n=a*d-b*c;
+            m=b*d;
+            s=n<m?n:m;
+            if(n==0)
+            {
+                printf("0\n");
+            }
+            else
+            {
+                for(i=s;;i--)
+            {
+                if(n%i==0&&m%i==0)
+                {
+                    n/=i;
+                    m/=i;
+                    if(m*n<0)
+                    {
+                        n=fabs(n);
+                        m=fabs(m);
+                        if(n==m||m==1)
+                        {
+                            printf("-%d\n",n);
+                            break;
+                        }
+                        else
+                        {
+                            printf("-%d/%d\n",n,m);
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        n=fabs(n);
+                        m=fabs(m);
+                       if(n==m||m==1)
+                        {
+                            printf("%d\n",n);
+                            break;
+                        }
+                        else
+                        {
+                            printf("%d/%d\n",n,m);
+                            break;
+                        }
+                    }
+                }
+            }
+            }
+        }
+        else if(o=='+')
+        {
+            n=a*d+b*c;
+            m=b*d;
+            s=n<m?n:m;
+            if(n==0)
+            {
+                printf("0\n");
+
+            }
+            else
+            {
+                for(j=s;;j--)
+            {
+                if(n%j==0&&m%j==0)
+                {
+                    n/=j;
+                    m/=j;
+                    if(m*n<0)
+                    {
+                        n=fabs(n);
+                        m=fabs(m);
+                        if(n==m||m==1)
+                        {
+                            printf("-%d\n",n);
+                            break;
+                        }
+                        else
+                        {
+                            printf("-%d/%d\n",n,m);
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        n=fabs(n);
+                        m=fabs(m);
+                       if(n==m||m==1)
+                        {
+                            printf("%d\n",n);
+                            break;
+                        }
+                        else
+                        {
+                            printf("%d/%d\n",n,m);
+                            break;
+                        }
+                    }
+                }
+            }
+            }
+        }
+    }
+    return 0;
+}
+*/
+#include<stdio.h>
+int main()
+{
+    int m=0,n=0,i=0,j=0,a=0,b=0,c=0,x=0,s=0;
+    float aver=0;
+    char p,q;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&m);
+        aver=100.00/m;
+        for(j=0;j<m;j++)
+        {
+            scanf("%d%c%d%c%d",&a,&p,&b,&q,&c);
+            if(p=='+')
+            {
+                x=a+b;
+                if(x==c)
+                    s++;
+            }
+            else if(p=='-')
+            {
+                x=a-b;
+                if(x==c)
+                    s++;
+            }
+            else if(p=='*')
+            {
+                x=a*b;
+                if(x==c)
+                    s++;
+            }
+            else if(p=='/')
+            {
+                if(b!=0)
+                {
+                    x=a/b;
+                    if(x==c)
+                        s++;
+                }
+            }
+            else
+            {
+                s=s;
+            }
+        }
+        printf("%.2f\n",s*aver);
+    }
+    return 0;
+}
