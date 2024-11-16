@@ -228,17 +228,3 @@ int main()
     }
     return 0;
 }*/
-#include<stdio.h>
-int main()
-{
-    int a,b,c,d;
-    char o,p,q;
-    while(scanf("%d %c %d %c %d %c %d",&a,&p,&b,&o,&c,&q,&d)==7)
-    {
-        if(o=='+')
-        {
-            int s=a/b+c/d;
-            printf("%d",s);
-        }
-    }
-}
