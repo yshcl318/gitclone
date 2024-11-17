@@ -30,7 +30,7 @@ int main()
     }
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     int n,i=0,x=0,y=0,z=0;
@@ -52,7 +52,7 @@ int main()
             else if(x>=2&&x<=10)
                 printf("Leopard %d\n",x);
         }
-        else if(a==b&&a==c&&((x+y==2*z)||(x+z==2*y)||(y+z==2*x)))
+        else if(a==b&&a==c&&((x+1==y&&x+2==z)||(x+1==z&&x+2==y)||(y+1==x&&y+2==z)||(y+1==z&&y+2==x)||(z+1==x&&z+2==y)||(z+1==y&&z+2==x)))
         {
             x=x>y?x:y;
             x=x>z?x:z;
@@ -67,7 +67,7 @@ int main()
             else if(x>=2&&x<=10)
                 printf("Flush straight %d\n",x);
         }
-        else if(x+y==2*z||x+z==2*y||y+z==2*x)
+        else if((x+1==y&&x+2==z)||(x+1==z&&x+2==y)||(y+1==x&&y+2==z)||(y+1==z&&y+2==x)||(z+1==x&&z+2==y)||(z+1==y&&z+2==x))
         {
             x=x>y?x:y;
             x=x>z?x:z;
@@ -153,4 +153,63 @@ int main()
         }
     }
         return 0;
+}*/
+#include<stdio.h>
+int main()
+{
+    int repeat=0,n=0,i=0,j=0,m=0,a=0,b=0,c=0,d=0,f=0,max=0,k=0;
+    char arr[100][100];
+    scanf("%d",&repeat);
+    for(k=0;k<repeat;k++)
+    {
+        for(i=0;i<100;i++)
+            for(j=0;j<100;j++)
+                    arr[i][j]=' ';
+        a=0;b=0;c=0;d=0;f=0;
+        scanf("%d",&n);
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&m);
+            if(m==1)
+                a++;
+            else if(m==2)
+                b++;
+            else if(m==3)
+                c++;
+            else if(m==4)
+                d++;
+            else if(m==5)
+                f++;
+        }
+        max=0;
+        max=a>b?a:b;
+        max=max>c?max:c;
+        max=max>d?max:d;
+        max=max>f?max:f;
+        for(j=0;j<a;j++)
+            arr[j][0]='*';
+        for(j=0;j<b;j++)
+            arr[j][1]='*';
+        for(j=0;j<c;j++)
+            arr[j][2]='*';
+        for(j=0;j<d;j++)
+            arr[j][3]='*';
+        for(j=0;j<f;j++)
+            arr[j][4]='*';
+        for(i=0;i<5;i++)
+        {
+            for(j=0;j<max;j++)
+            {
+                arr[i][j]==' ';
+            }
+        }
+        for(i=5;i>=0;i--)
+        {
+            for(j=0;j<=max;j++)
+                printf("%c ",arr[i][j]);
+            printf("\n");
+        }
+        printf("1 2 3 4 5\n");
+    }
+    return 0;
 }
