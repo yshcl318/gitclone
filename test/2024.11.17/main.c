@@ -213,3 +213,71 @@ int main()
     }
     return 0;
 }
+/*#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int a,i=0,j=0,k=0,b=0,c=0;
+    scanf("%d",&a);
+    for(i=2;i<a/2;i++)
+    {
+        b=0;
+        for(j=1;j<=sqrt(i);j++)
+           if(i%j==0)
+               b++;
+        if(b==1)
+        {
+            for(k=2;k<a;k++)
+            {
+                c=0;
+                for(j=1;j<=sqrt(k);j++)
+                    if(k%j==0)
+                        c++;
+                if(c==1)
+                    if(k!=i&&k+i==a)
+                        printf("%d=%d+%d\n",a,i,k);
+
+            }
+        }
+    }
+    return 0;
+}*/
+/*#include<stdio.h>
+int main()
+{
+    long long n,m=0;
+    scanf("%lld",&n);
+    do
+    {
+        m=0;
+        while(n>0)
+        {
+            m=m+n%10;
+            n/=10;
+        }
+        n=m;
+    }while(m>9);
+    printf("%d",m);
+    return 0;
+}*/
+/*#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    while(a!=1)
+    {
+        if(a%2==0)
+        {
+            a/=2;
+            printf("%d ",a);
+        }
+        else
+        {
+            a=a*3+1;
+            printf("%d ",a);
+        }
+    }
+    return 0;
+}
+*/
