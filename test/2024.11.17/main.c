@@ -154,65 +154,7 @@ int main()
     }
         return 0;
 }*/
-#include<stdio.h>
-int main()
-{
-    int repeat=0,n=0,i=0,j=0,m=0,a=0,b=0,c=0,d=0,f=0,max=0,k=0;
-    char arr[100][100];
-    scanf("%d",&repeat);
-    for(k=0;k<repeat;k++)
-    {
-        for(i=0;i<100;i++)
-            for(j=0;j<100;j++)
-                    arr[i][j]=' ';
-        a=0;b=0;c=0;d=0;f=0;
-        scanf("%d",&n);
-        for(j=0;j<n;j++)
-        {
-            scanf("%d",&m);
-            if(m==1)
-                a++;
-            else if(m==2)
-                b++;
-            else if(m==3)
-                c++;
-            else if(m==4)
-                d++;
-            else if(m==5)
-                f++;
-        }
-        max=0;
-        max=a>b?a:b;
-        max=max>c?max:c;
-        max=max>d?max:d;
-        max=max>f?max:f;
-        for(j=0;j<a;j++)
-            arr[j][0]='*';
-        for(j=0;j<b;j++)
-            arr[j][1]='*';
-        for(j=0;j<c;j++)
-            arr[j][2]='*';
-        for(j=0;j<d;j++)
-            arr[j][3]='*';
-        for(j=0;j<f;j++)
-            arr[j][4]='*';
-        for(i=0;i<5;i++)
-        {
-            for(j=0;j<max;j++)
-            {
-                arr[i][j]==' ';
-            }
-        }
-        for(i=5;i>=0;i--)
-        {
-            for(j=0;j<=max;j++)
-                printf("%c ",arr[i][j]);
-            printf("\n");
-        }
-        printf("1 2 3 4 5\n");
-    }
-    return 0;
-}
+
 /*#include<stdio.h>
 #include<math.h>
 int main()
@@ -281,3 +223,115 @@ int main()
     return 0;
 }
 */
+
+/*#include<stdio.h>
+int main()
+{
+    int repeat=0,n=0,i=0,j=0,m=0,a=0,b=0,c=0,d=0,f=0,max=0,k=0;
+    char arr[5][100];
+    scanf("%d",&repeat);
+    for(k=0;k<repeat;k++)
+    {
+        for(i=0;i<5;i++)
+            for(j=0;j<100;j++)
+                    arr[i][j]=' ';
+        a=0;b=0;c=0;d=0;f=0;
+        scanf("%d",&n);
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&m);
+            if(m==1)
+                a++;
+            else if(m==2)
+                b++;
+            else if(m==3)
+                c++;
+            else if(m==4)
+                d++;
+            else if(m==5)
+                f++;
+        }
+        max=0;
+        max=a>b?a:b;
+        max=max>c?max:c;
+        max=max>d?max:d;
+        max=max>f?max:f;
+        for(j=0;j<a;j++)
+            arr[j][0]='*';
+        for(j=0;j<b;j++)
+            arr[j][1]='*';
+        for(j=0;j<c;j++)
+            arr[j][2]='*';
+        for(j=0;j<d;j++)
+            arr[j][3]='*';
+        for(j=0;j<f;j++)
+            arr[j][4]='*';
+        for(j=max-1;j>=0;j--)
+        {
+            for(i=0;i<5;i++)
+                printf("%c ",arr[j][i]);
+            printf("\n");
+        }
+        printf("1 2 3 4 5\n");
+    }
+    return 0;
+}*/
+#include<stdio.h>
+
+int main() {
+    int repeat = 0, n = 0, i = 0, j = 0, m = 0, a = 0, b = 0, c = 0, d = 0, f = 0, max = 0, k = 0;
+    char arr[5][100]; // 只需要一个5行100列的数组
+
+    scanf("%d", &repeat);
+    for (k = 0; k < repeat; k++) {
+        // 初始化数组
+        for (i = 0; i < 5; i++)
+            for (j = 0; j < 100; j++)
+                arr[i][j] = ' ';
+
+        a = b = c = d = f = 0;
+        scanf("%d", &n);
+        for (j = 0; j < n; j++) {
+            scanf("%d", &m);
+            if (m == 1)
+                a++;
+            else if (m == 2)
+                b++;
+            else if (m == 3)
+                c++;
+            else if (m == 4)
+                d++;
+            else if (m == 5)
+                f++;
+        }
+
+        max = a > max ? a : max;
+        max = b > max ? b : max;
+        max = c > max ? c : max;
+        max = d > max ? d : max;
+        max = f > max ? f : max;
+
+        // 打印直方图
+        for (j = 0; j < max; j++) {
+            for (i = 0; i < a; i++)
+                if (j < a) arr[0][j] = '*';
+            for (i = 0; i < b; i++)
+                if (j < b) arr[1][j] = '*';
+            for (i = 0; i < c; i++)
+                if (j < c) arr[2][j] = '*';
+            for (i = 0; i < d; i++)
+                if (j < d) arr[3][j] = '*';
+            for (i = 0; i < f; i++)
+                if (j < f) arr[4][j] = '*';
+        }
+
+        // 打印直方图的每一行
+        for (j = max-1; j >= 0; j--) {
+            for (i = 0; i < 5; i++)
+                printf("%c ", arr[i][j]);
+            printf("\n");
+        }
+        printf("1 2 3 4 5\n");
+    }
+    return 0;
+}
