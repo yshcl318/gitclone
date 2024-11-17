@@ -1,6 +1,6 @@
 # depslib dependency file v1.0
-1731813376 source:d:\csdn\test\2024.11.17\main.c
-	<stdio.h>
+1731826728 source:d:\csdn\test\2024.11.17\main.c
 	<stdlib.h>
 	<math.h>
+	<stdio.h>
 
