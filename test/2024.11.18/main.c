@@ -105,7 +105,7 @@ int main()
         printf("整数%d中没有重复数字.\n",num);
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     int a,b,c,d,e;
@@ -130,4 +130,4 @@ int main()
         }
     }
     return 0;
-}
+}*/
