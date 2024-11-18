@@ -56,7 +56,7 @@ int main()
     return 0;
 }
 */
-#include<stdio.h>
+/*#include<stdio.h>
 #define N 10
 int main()
 {
@@ -81,5 +81,53 @@ int main()
     for(i=1;i<=N;i++)
         printf("%d ",data[i]);
     printf("\n");
+    return 0;
+}*/
+/*#include<stdio.h>
+int main()
+{
+    int i,num,n;
+    int count[10]={0};
+    printf("请输入一个正整数:");
+    scanf("%d",&num);
+    n=num;
+    do
+    {
+        count[n%10]++;
+        n/=10;
+    }while(n!=0);
+    for (i=0;i<10;i++)
+        if(count[i]>1)
+            break;
+    if(i<10)
+        printf("整数%d中存在重复数字.\n",num);
+    else
+        printf("整数%d中没有重复数字.\n",num);
+    return 0;
+}*/
+#include<stdio.h>
+int main()
+{
+    int a,b,c,d,e;
+    for(a=1;a<=5;a++)
+    {
+        for(b=2;b<=5;b++)
+        {
+            if(b==a)continue;
+            for(c=1;c<=5;c++)
+            {
+                if(c==b||c==a)continue;
+                if((c<=2)!=(a==5))continue;
+                for(d=1;d<=5;d++)
+                {
+                    if(d==a||d==b||d==c)continue;
+                    if((d<=2)!=(c!=1))continue;
+                    e=15-a-b-c-d;
+                    if((e!=2&&e!=3)&&((a<=2)==(e==1))&&((e<=2)==(d==1))&&((e==1)+(b==2)+(a==5)+(c!=1)+(d==1)==2))
+                        printf("A=%d,B=%d,C=%d,D=%d,E=%d\n",a,b,c,d,e);
+                }
+            }
+        }
+    }
     return 0;
 }
