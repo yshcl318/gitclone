@@ -53,7 +53,7 @@ int main()
             printf("%d ",a[i]);
         return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 #define N 7
 #define L (80-N)/2
 int main()
@@ -72,3 +72,4 @@ int main()
     }
     return 0;
 }
+*/
