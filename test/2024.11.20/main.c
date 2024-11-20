@@ -73,3 +73,56 @@ int main()
     return 0;
 }
 */
+/*#include<stdio.h>
+#define N 20
+int main()
+{
+    int i=0,j=0,t=0,a[N+1];
+    for(i=1;i<N+1;i++)
+        scanf("%d",&a[i]);
+    for(i=2;i<N+1;i++)
+        for(j=i;j>1;j--)
+            if(a[j]>=a[j-1])break;
+            else{t=a[j];a[j]=a[j-1];a[j-1]=t;}
+    i=1;
+    while(i<=N)
+        printf("%d,",a[i++]);
+    printf("\n");
+    return 0;
+}*/
+/*#include<stdio.h>
+int main()
+{
+    char str1[81],str2[40];
+    int i=0,j=0;
+    fgets(str1,81,stdin);fgets(str2,40,stdin);
+    while(str1[i]!='\n')
+        i++;
+    while(str2[j]!='\0')
+    {
+        str1[i]=str2[j];
+        i++;
+        j++;
+    }
+    str1[i]='\0';
+    puts(str1);
+    return 0;
+}*/
+#include<stdio.h>
+int main()
+{
+    char str[81],substr[81];
+    int k=0,n=0,loc=0,len=0;
+    fgets(str,81,stdin);
+    scanf("%d%d",&loc,&len);
+    if(loc<1||loc>strlen(str)||len<=0)
+        substr[0]='\0';
+    else
+    {
+        for(n=loc-1;k<len&&n<81;n++,k++)
+            substr[k]=str[n];
+    substr[k]='\0';
+    }
+    printf("sub string is %s, its length is %d\n",substr,k);
+    return 0;
+}
