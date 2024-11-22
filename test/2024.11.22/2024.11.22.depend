@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1732262614 source:d:\csdn\test\2024.11.22\main.c
+1732263693 source:d:\csdn\test\2024.11.22\main.c
 	<time.h>
 	<stdlib.h>
+	<math.h>
 	<math.h>
 	<stdio.h>
 
