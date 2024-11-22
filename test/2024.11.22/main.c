@@ -580,7 +580,7 @@ int main()
 {
     int a,b,j=0;
     scanf("%d %d",&a,&b);
-    for(int i=a+1;j<5;i++)
+    for(int i=a+1;j<b;i++)
     {
         int x=0,y=0;
         for(int k=2;k<i/2;k++)
@@ -594,7 +594,7 @@ int main()
                     y++;
             if(y==0)
             {
-                printf("%d %d\n",i,g);
+                printf("%d,%d\n",i,g);
                 j++;
             }
         }
