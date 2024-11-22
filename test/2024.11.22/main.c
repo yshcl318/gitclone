@@ -458,7 +458,7 @@ int main()
         }
         return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     int a,b,c,d,e,s;
@@ -520,7 +520,7 @@ int main()
     }
     return 0;
 }
-
+*/
 /*#include <stdio.h>
 
 // 函数用于判断是否为闰年
@@ -575,3 +575,29 @@ int main() {
 
     return 0;
 }*/
+#include<stdio.h>
+int main()
+{
+    int a,b,j=0;
+    scanf("%d %d",&a,&b);
+    for(int i=a+1;j<5;i++)
+    {
+        int x=0,y=0;
+        for(int k=2;k<i/2;k++)
+            if(i%k==0)
+                x++;
+        if(x==0)
+        {
+            int g=i+2;
+            for(int k=2;k<g/2;k++)
+                if(g%k==0)
+                    y++;
+            if(y==0)
+            {
+                printf("%d %d\n",i,g);
+                j++;
+            }
+        }
+    }
+    return 0;
+}
