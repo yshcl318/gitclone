@@ -696,6 +696,7 @@ int main()
             else
             {
                 printf("error\n");
+
             }
         }
     }
