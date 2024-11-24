@@ -108,7 +108,7 @@ int main()
     puts(str1);
     return 0;
 }*/
-#include<stdio.h>
+/*include<stdio.h>
 int main()
 {
     char str[81],substr[81];
@@ -125,4 +125,4 @@ int main()
     }
     printf("sub string is %s, its length is %d\n",substr,k);
     return 0;
-}
+}*/

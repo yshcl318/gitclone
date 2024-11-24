@@ -630,7 +630,7 @@ double f(double x)
     return y;
 }
 */
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     int a=0,b=0,s=1;
@@ -701,7 +701,7 @@ int main()
         }
     }
     return 0;
-}
+}*/
 /*#include <stdio.h>
 
 // º¯ÊıÉùÃ÷
