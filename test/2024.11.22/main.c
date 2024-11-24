@@ -779,3 +779,121 @@ int factorial(int n) {
     if (n == 0) return 1;
     return n * factorial(n - 1);
 }*/
+/*#include<stdio.h>
+int leapyear(int year)
+{
+    return (year%4==0&&year%100!=0||year%400==0);
+}
+int main()
+{
+    int x,days=-3,day,month,year,months[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+    scanf("%d",&x);
+    day=x%100;
+    month=x/100%100;
+    year=x/10000;
+    for(int i=1900;i<year;i++)
+    {
+        days+=365;
+        if(leapyear(i))days+=1;
+        days%=7;
+    }
+    if(leapyear(year))
+    {
+        for(int i=0;i<month;i++)
+        {
+            days+=months[i];
+            days%=7;
+        }
+        if(month>2)
+            days+=1;
+        days%=7;
+
+    }
+    else
+    {
+        for(int i=0;i<month;i++)
+        {
+            days+=months[i];
+            days%=7;
+        }
+    }
+    days+=day;
+    days%=7;
+    switch(days)
+    {
+        case 1:printf("Mon");break;
+        case 2:printf("Tue");break;
+        case 3:printf("Wed");break;
+        case 4:printf("Thu");break;
+        case 5:printf("Fri");break;
+        case 6:printf("Sat");break;
+        case 0:printf("Sun");break;
+    }
+    return 0;
+}*/
+#include <stdio.h>
+int getWeek(int day)
+{
+	/**********Begin**********/
+	int days=-1,day_s,p=0,month,year,months[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+    day_s=day%100;
+    month=day/100%100;
+    year=day/10000;
+    if(year%4==0&&year%100!=0||year%400==0)
+        p=1;
+    for(int i=1900;i<year-1;i++)
+    {
+        days+=365;
+        if(p)days+=1;
+        days%=7;
+    }
+    if(p)
+    {
+        for(int i=0;i<month;i++)
+        {
+            days+=months[i];
+            days%=7;
+        }
+        if(month>2)
+            days+=1;
+        days%=7;
+
+    }
+    else
+    {
+        for(int i=0;i<month;i++)
+        {
+            days+=months[i];
+            days%=7;
+        }
+    }
+    days+=day_s;
+    days%=7;
+    return days;
+    /**********End**********/
+}
+
+void printWeek(int w)
+{
+	/**********Begin**********/
+	switch(w)
+    {
+        case 1:printf("Mon");break;
+        case 2:printf("Tue");break;
+        case 3:printf("Wed");break;
+        case 4:printf("Thu");break;
+        case 5:printf("Fri");break;
+        case 6:printf("Sat");break;
+        case 0:printf("Sun");break;
+    }
+    /**********End**********/
+}
+int main()
+{
+	int date;
+   scanf("%d",&date);
+   int week = getWeek(date);
+   printWeek(week);
+	return 0;
+}
+
