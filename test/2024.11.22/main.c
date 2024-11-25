@@ -835,19 +835,17 @@ int main()
 int getWeek(int day)
 {
 	/**********Begin**********/
-	int days=-1,day_s,p=0,month,year,months[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+	int days=-3,day_s,month,year,months[12]={31,28,31,30,31,30,31,31,30,31,30,31};
     day_s=day%100;
     month=day/100%100;
     year=day/10000;
-    if(year%4==0&&year%100!=0||year%400==0)
-        p=1;
-    for(int i=1900;i<year-1;i++)
+    for(int i=1900;i<year;i++)
     {
         days+=365;
-        if(p)days+=1;
+        if(i%4==0&&i%100!=0||i%400==0)days+=1;
         days%=7;
     }
-    if(p)
+    if(year%4==0&&year%100!=0||year%400==0)
     {
         for(int i=0;i<month;i++)
         {
