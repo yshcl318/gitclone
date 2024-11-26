@@ -831,10 +831,10 @@ int main()
     }
     return 0;
 }*/
-#include <stdio.h>
+/*#include <stdio.h>
 int getWeek(int day)
 {
-	/**********Begin**********/
+
 	int days=-3,day_s,month,year,months[12]={31,28,31,30,31,30,31,31,30,31,30,31};
     day_s=day%100;
     month=day/100%100;
@@ -868,12 +868,10 @@ int getWeek(int day)
     days+=day_s;
     days%=7;
     return days;
-    /**********End**********/
 }
 
 void printWeek(int w)
 {
-	/**********Begin**********/
 	switch(w)
     {
         case 1:printf("Mon");break;
@@ -884,7 +882,7 @@ void printWeek(int w)
         case 6:printf("Sat");break;
         case 0:printf("Sun");break;
     }
-    /**********End**********/
+
 }
 int main()
 {
@@ -894,4 +892,4 @@ int main()
    printWeek(week);
 	return 0;
 }
-
+*/
