@@ -15,7 +15,7 @@ void Rua() {
     }
 
 }*/
-#include <stdio.h>
+/*#include <stdio.h>
 int ack(int, int);
 int main() {
 	int m, n;
@@ -32,4 +32,25 @@ int ack(int m, int n) {
     else if(m>0&&n>0)
         return ack(m-1,ack(m,n-1));
 
+}*/
+#include <stdio.h>
+int panda[101] = { 1, 1, 1, 1, 2 };
+/**********Begin**********/
+int s(int);
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int a=s(n);
+    printf("%d",a);
+    return 0;
 }
+int s(int n)
+{
+    if(n<5)
+        return 1;
+    else
+        return s(n-1)+s(n-4);
+}
+/**********End**********/
