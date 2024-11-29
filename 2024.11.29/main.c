@@ -83,7 +83,7 @@ int main()
     printf("%lld",c);
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 long long gcd(long long a,long long b){
     if(a%b==0) return b;
     else       return gcd(b,a%b);        //ตÝน้
@@ -93,4 +93,21 @@ int main(){
   scanf("%lld%lld",&m,&n);
   printf("%lld",gcd(m,n));
   return 0;
+}
+*/
+#include<stdio.h>
+int s(int n)
+{
+    if(n==1)
+        return 1;
+    else
+        return n+s(n-1);
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int c=s(n);
+    printf("%d",c);
+    return 0;
 }
