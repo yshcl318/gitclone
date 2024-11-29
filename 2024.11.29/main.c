@@ -53,7 +53,7 @@ int s(int n)
         return s(n-1)+s(n-4);
 }
 */
-#include <stdio.h>
+/*#include <stdio.h>
 long long hanoi(int num) {
 	if(num==1)
         return 2;
@@ -66,4 +66,31 @@ int main() {
 		printf("%lld\n", hanoi(n));
 	}
 	return 0;
+}*/
+/*#include<stdio.h>
+long long s(long long a,long long b)
+{
+    if(a%b==0)
+        return b;
+    else
+        return s(b,a%b);
+}
+int main()
+{
+    long long a,b;
+    scanf("%lld%lld",&a,&b);
+    long long c=s(a,b);
+    printf("%lld",c);
+    return 0;
+}*/
+#include<stdio.h>
+long long gcd(long long a,long long b){
+    if(a%b==0) return b;
+    else       return gcd(b,a%b);        //ตÝน้
+}
+int main(){
+  long long m,n;
+  scanf("%lld%lld",&m,&n);
+  printf("%lld",gcd(m,n));
+  return 0;
 }
