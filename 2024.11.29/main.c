@@ -112,7 +112,7 @@ int main()
     return 0;
 }
 */
-#include<stdio.h>
+/*#include<stdio.h>
 void s(int n)
 {
     int i=0,a[100]={0};
@@ -132,6 +132,44 @@ int main()
     for(int i=a;i<=b;i++)
     {
         s(i);
+    }
+    return 0;
+}
+*/
+#include<stdio.h>
+int s(int i)
+{
+    int a=i%16;
+    if(a<10)
+    {
+        if(i/16>0)
+            s(i/16);
+        printf("%d",a);
+    }
+    else if(a>=10)
+    {
+        if(i/16>0)
+            s(i/16);
+        switch(a)
+        {
+            case 10:printf("A");break;
+            case 11:printf("B");break;
+            case 12:printf("C");break;
+            case 13:printf("D");break;
+            case 14:printf("E");break;
+            case 15:printf("F");break;
+        }
+    }
+}
+int main()
+{
+    int a,b,i;
+    char c[1000];
+    scanf("%d%d",&a,&b);
+    for(i=a;i<=b;i++)
+    {
+        s(i);
+        printf(" ");
     }
     return 0;
 }
