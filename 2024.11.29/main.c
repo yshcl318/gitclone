@@ -136,7 +136,7 @@ int main()
     return 0;
 }
 */
-#include<stdio.h>
+/*#include<stdio.h>
 int s(int i)
 {
     int a=i%16;
@@ -171,5 +171,21 @@ int main()
         s(i);
         printf(" ");
     }
+    return 0;
+}*/
+#include<stdio.h>
+int s(int n)
+{
+    if(n==1)
+        return 1;
+    else
+        return 2*s(n-1)+1;
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int c=s(n);
+    printf("%d",c);
     return 0;
 }
