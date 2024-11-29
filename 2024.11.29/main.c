@@ -173,7 +173,7 @@ int main()
     }
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 int s(int n)
 {
     if(n==1)
@@ -187,5 +187,17 @@ int main()
     scanf("%d",&n);
     int c=s(n);
     printf("%d",c);
+    return 0;
+}*/
+#include<stdio.h>
+int main()
+{
+    int n,s=1;
+    scanf("%d",&n);
+    for(int i=1;i<=n-1;i++)
+    {
+        s=2*s+1;
+    }
+    printf("%d",s);
     return 0;
 }
