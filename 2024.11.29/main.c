@@ -33,9 +33,8 @@ int ack(int m, int n) {
         return ack(m-1,ack(m,n-1));
 
 }*/
-#include <stdio.h>
+/*#include <stdio.h>
 int panda[101] = { 1, 1, 1, 1, 2 };
-/**********Begin**********/
 int s(int);
 
 int main()
@@ -53,4 +52,18 @@ int s(int n)
     else
         return s(n-1)+s(n-4);
 }
-/**********End**********/
+*/
+#include <stdio.h>
+long long hanoi(int num) {
+	if(num==1)
+        return 2;
+    else
+        return 3*hanoi(num-1)+2;
+}
+int main() {
+	int n;
+	while (scanf("%d", &n) != EOF) {
+		printf("%lld\n", hanoi(n));
+	}
+	return 0;
+}
