@@ -95,7 +95,7 @@ int main(){
   return 0;
 }
 */
-#include<stdio.h>
+/*#include<stdio.h>
 int s(int n)
 {
     if(n==1)
@@ -109,5 +109,29 @@ int main()
     scanf("%d",&n);
     int c=s(n);
     printf("%d",c);
+    return 0;
+}
+*/
+#include<stdio.h>
+void s(int n)
+{
+    int i=0,a[100]={0};
+    for(i=0;n>0;i++)
+    {
+        a[i]=n%2;
+        n/=2;
+    }
+    for(int j=i-1;j>=0;j--)
+        printf("%d",a[j]);
+    printf("\n");
+}
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    for(int i=a;i<=b;i++)
+    {
+        s(i);
+    }
     return 0;
 }
