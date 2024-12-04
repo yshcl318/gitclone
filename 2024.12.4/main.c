@@ -21,7 +21,7 @@ int main()
     return 0;
 }
 */
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     char str[81],*p=str;
@@ -44,4 +44,54 @@ int main()
     }
     printf("\共找到%d个整数.\n",count);
     return 0;
+}*/
+#include<stdio.h>
+#include<stdlib.h>
+FILE*fp;
+int read_attribute(char *);
+int main()
+{
+    char attr[30];
+    float sum,score,maxsum;
+    int order=0;
+    if((fp=fopen("d:\\scores.txt","r"))==NULL)
+    {
+        printf("无法打开文件！\n");
+        exit(0);
+    }
+    sum=0.0,maxsum=0.0;
+    while(read_attribute(attr))
+    {
+        if(order%6<=1)
+            printf("%- 16s",attr);
+       else if(order%6<=5)
+       {
+            score=atof(attr);
+            sum+=score;
+            printf("%4.lf ",score);
+            if(order%6==5)
+            {
+                printf("%4.lf\n",sum);
+                if(sum>maxsum)maxsum=sum;
+                sum=0.0;
+            }
+       }
+       order++;
+    }
+    printf("共有%d个学生；最高总分是%4.lf\n",order/6,maxsum);
+    return  0;
+}
+int read_attribute(char *p)
+{
+    char ch=fgetc(fp);
+    while(ch==' '||ch=='\t'||ch=='\n')
+        ch=fgetc(fp);
+    while(ch!=EOF&&ch!=';')
+    {
+        *p++=ch;
+        ch=fgetc(fp);
+    }
+    *p='\0';
+    if(ch==EOF)return 0;
+    else return 1;
 }
