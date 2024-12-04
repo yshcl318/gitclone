@@ -96,7 +96,7 @@ int read_attribute(char *p)
     else return 1;
 }
 */
-#include<stdio.h>
+/*#include<stdio.h>
 #include<string.h>
 int main()
 {
@@ -128,4 +128,38 @@ int main()
     puts(str2);
     puts(str3);
     return 0;
+}*/
+#include<stdio.h>
+#define M 10
+#define N 8
+void merge_sort(int *x,int lenx,int *y,int leny,int *z)
+{
+    int i=0,j=0,k=0;
+    while(i<lenx&&j<leny)
+        if(x[i]<y[j])z[k++]=x[i++];
+        else z[k++]=y[j++];
+    while(i<lenx)
+        z[k++]=x[i++];
+    while(j<leny)
+        z[k++]=y[j++];
+}
+int main()
+{
+    int a[M],b[N],i,c[M+N];
+    for(int j=0;j<M;j++)
+        scanf("%d ",&a[j]);
+    for(int j=0;j<N;j++)
+        scanf("%d ",&b[j]);
+    printf("原始的有序数组a:\n\t");
+    for(i=0;i<M;i++)
+        printf("%d,",a[i]);
+     printf("\n原始的有序数组b:\n\t");
+    for(i=0;i<N;i++)
+        printf("%d,",b[i]);
+        merge_sort(a,M,b,N,c);
+        printf("\n归并得到的有序数组c:\n\t");
+        for(i=0;i<M+N;i++)
+            printf("%d,",c[i]);
+        printf("\n");
+        return 0;
 }
