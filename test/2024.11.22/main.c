@@ -702,7 +702,7 @@ int main()
     }
     return 0;
 }*/
-/*#include <stdio.h>
+#include <stdio.h>
 
 // º¯ÊıÉùÃ÷
 int calculate(char op, int a, int b);
@@ -778,7 +778,7 @@ int calculate(char op, int a, int b) {
 int factorial(int n) {
     if (n == 0) return 1;
     return n * factorial(n - 1);
-}*/
+}
 /*#include<stdio.h>
 int leapyear(int year)
 {
