@@ -45,7 +45,7 @@ int main()
     printf("\共找到%d个整数.\n",count);
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 #include<stdlib.h>
 FILE*fp;
 int read_attribute(char *);
@@ -94,4 +94,38 @@ int read_attribute(char *p)
     *p='\0';
     if(ch==EOF)return 0;
     else return 1;
+}
+*/
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str1[20],str2[20],str3[20],temp[20];
+    printf("请输入三个字符床（每个字符串均以回车符结束）:\n");
+    gets(str1);
+    gets(str2);
+    gets(str3);
+    if(strcmp(str1,str2)>0)
+    {
+        strcpy(temp,str1);
+        strcpy(str1,str2);
+        strcpy(str2,temp);
+    }
+    if(strcmp(str2,str3)>0)
+    {
+        strcpy(temp,str2);
+        strcpy(str2,str3);
+        strcpy(str3,temp);
+    }
+    if(strcmp(str1,str2)>0)
+    {
+        strcpy(temp,str1);
+        strcpy(str1,str2);
+        strcpy(str2,temp);
+    }
+        printf("排序后:\n");
+    puts(str1);
+    puts(str2);
+    puts(str3);
+    return 0;
 }
