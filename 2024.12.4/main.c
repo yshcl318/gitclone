@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #define N 10
 int main()
@@ -18,5 +18,30 @@ int main()
     for(i=0;i<N;i++)
         printf("%d ",a[i]);
     printf("\n");
+    return 0;
+}
+*/
+#include<stdio.h>
+int main()
+{
+    char str[81],*p=str;
+    int num,count=0;
+    printf("请输入一个包含多段数字的字符串:\n");
+    gets(str);
+    printf("从该字符串中找到的整数有:\n");
+    while(*p)
+    {
+        if(*p>='0'&&*p<='9')
+        {
+            for(num=0;*p>='0'&&*p<='9';p++)
+                num=num*10+(*p-'0');
+            count++;
+            printf("No %d:%d ",count,num);
+        }
+        else
+            while(*p!='\0'&&(*p<'0'||*p>'9'))
+                p++;
+    }
+    printf("\共找到%d个整数.\n",count);
     return 0;
 }
