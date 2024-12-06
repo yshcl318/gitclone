@@ -11,9 +11,7 @@ double getnum()
 char getopt()
 {
     char c;
-    do {
-        c = getchar();
-    } while (isspace(c));
+    c = getchar();
     return c;
 }
 
