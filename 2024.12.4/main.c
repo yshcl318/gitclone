@@ -129,7 +129,7 @@ int main()
     puts(str3);
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 #define M 10
 #define N 8
 void merge_sort(int *x,int lenx,int *y,int leny,int *z)
@@ -162,4 +162,4 @@ int main()
             printf("%d,",c[i]);
         printf("\n");
         return 0;
-}
+}*/
