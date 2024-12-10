@@ -243,7 +243,7 @@ int main()
     return 0;
 }
 */
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     int n,i=0,j=0,k=0,x=0,y=0;
@@ -311,5 +311,36 @@ int main()
         }
         printf("\n");
     }
+    return 0;
+}*/
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int n,x,i=0,j,min;
+    scanf("%d",&n);
+    int a[n],b[n];
+    int* p=&a[0];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&*(p+i));
+    }
+    scanf("%d",&x);
+    for(i=0;i<n;i++)
+    {
+        b[i]=*(p+i)-x;
+    }
+    min=abs(b[0]);
+    for(i=0;i<n;i++)
+    {
+        j=abs(b[i]);
+        min=min<j?min:j;
+    }
+    for(i=0;i<n;i++)
+        if(abs(b[i])==min)
+        {
+            printf("%d",*(p+i));
+            break;
+        }
     return 0;
 }
