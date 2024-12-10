@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
-1733464290 source:d:\csdn\2024.12.6\main.c
+1733494146 source:d:\csdn\2024.12.6\main.c
 	<stdio.h>
+	<string.h>
 
