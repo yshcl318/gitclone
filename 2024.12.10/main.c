@@ -200,7 +200,7 @@ int main()
     }
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     int n,i,j,k=0;
@@ -213,9 +213,9 @@ int main()
             k++;
             a[i][j]=k;
         }
-        k+=15;
+        k+=n;
     }
-    k=15;
+    k=n;
     for(i=1;i<n;i+=2)
     {
          for(j=n-1;j>=0;j--)
@@ -223,18 +223,91 @@ int main()
             k++;
             a[i][j]=k;
         }
-        k+=15;
+        k+=n;
     }
     for(i=0;i<n;i++)
     {
          for(j=0;j<n;j++)
         {
             if(a[i][j]<10)
-                printf("00%d ",a[i][j]);
+                printf("00%d",a[i][j]);
             else if(a[i][j]<100)
-                printf("0%d ",a[i][j]);
+                printf("0%d",a[i][j]);
             else
-                printf("%d ",a[i][j]);
+                printf("%d",a[i][j]);
+                if(j<n-1)
+                    printf(" ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+*/
+#include<stdio.h>
+int main()
+{
+    int n,i=0,j=0,k=0,x=0,y=0;
+    scanf("%d",&n);
+    int a[n][n];
+    while(1)
+    {
+        for(j;j<n-x;j++)
+        {
+            k++;
+            a[i][j]=k;
+            if(k>=n*n)
+                break;
+        }
+        if(k>=n*n)
+            break;
+        i+=1;
+        j-=1;
+        for(i;i<n-y;i++)
+        {
+            k++;
+            a[i][j]=k;
+            if(k>=n*n)
+                break;
+        }
+        if(k>=n*n)
+            break;
+        j-=1;
+        i-=1;
+        for(j;j>x;j--)
+        {
+            k++;
+            a[i][j]=k;
+            if(k>=n*n)
+                break;
+        }
+        if(k>=n*n)
+            break;
+
+        y++;
+        for(i;i>y;i--)
+        {
+            k++;
+            a[i][j]=k;
+            if(k>=n*n)
+                break;
+        }
+        if(k>=n*n)
+            break;
+        x++;
+
+    }
+    for(i=0;i<n;i++)
+    {
+         for(j=0;j<n;j++)
+        {
+            if(a[i][j]<10)
+                printf("00%d",a[i][j]);
+            else if(a[i][j]<100)
+                printf("0%d",a[i][j]);
+            else
+                printf("%d",a[i][j]);
+                if(j<n-1)
+                    printf(" ");
         }
         printf("\n");
     }
