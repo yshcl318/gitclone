@@ -469,7 +469,7 @@ int main()
     return 0;
 }
 */
-#include<stdio.h>
+/*#include<stdio.h>
 
 void countwords(char* p) {
     int t = 0;
@@ -498,5 +498,59 @@ int main() {
         arr[len - 1] = '\0';
     }
     countwords(arr);
+    return 0;
+}
+*/
+#include <stdio.h>
+#include <string.h>
+
+// 检查子串 t 是否在 s 的位置 pos 开始
+int match(char *s, char *t, int pos) {
+    int i;
+    for (i = 0; t[i] != '\0'; i++) {
+        if (s[pos + i] != t[i]) {
+            return 0; // 不匹配
+        }
+    }
+    return 1; // 匹配
+}
+
+void findPositions(char *s, char *t) {
+    int s_len = strlen(s);
+    int t_len = strlen(t);
+    int found = 0;
+
+    for (int i = 0; i <= s_len - t_len; i++) {
+        if (match(s, t, i)) {
+            printf("%d\n", i);
+            found = 1;
+        }
+    }
+
+    if (!found) {
+        printf("-1\n");
+    }
+}
+
+int main() {
+    char s[100];
+    char t[100];
+
+    // 读取字符串s和t
+    fgets(s, sizeof(s), stdin);
+    fgets(t, sizeof(t), stdin);
+
+    // 去除fgets读入的换行符
+    size_t len_s = strlen(s);
+    if (len_s > 0 && s[len_s - 1] == '\n') {
+        s[len_s - 1] = '\0';
+    }
+    size_t len_t = strlen(t);
+    if (len_t > 0 && t[len_t - 1] == '\n') {
+        t[len_t - 1] = '\0';
+    }
+
+    findPositions(s, t);
+
     return 0;
 }
