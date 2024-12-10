@@ -374,7 +374,7 @@ int main()
     return 0;
 }
 */
-#include<stdio.h>
+/*#include<stdio.h>
 void swap(int* a,int* b)
 {
     if(*a>*b)
@@ -405,5 +405,21 @@ int main()
     for(i=0;i<n;i++)
         scanf("%d",&a[i]);
     sort(&a[0],n,1);
+    return 0;
+}*/
+#include<stdio.h>
+int main()
+{
+    char arr[100];
+    char* p=&arr[0];
+    int i=0,j=0,k=0;
+    scanf("%s",&arr);
+    for(j=0;arr[j]!='\0';j++);
+    for(i=0;arr[i]!='\0';i++)
+    {
+        for(k=i;k<j;k++)
+            printf("%c",*(p+k));
+        printf("\n");
+    }
     return 0;
 }
