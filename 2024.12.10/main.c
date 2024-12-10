@@ -407,7 +407,7 @@ int main()
     sort(&a[0],n,1);
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     char arr[100];
@@ -422,4 +422,50 @@ int main()
         printf("\n");
     }
     return 0;
+}*/
+/*#include<stdio.h>
+#include<string.h>
+int countwords(char* p)
+{
+    int i=0,t=0;
+    for(i=0;*(p+i)!='\0';i++)
+    {
+        if(*(p+i)!=' ')
+        {
+            t++;
+            for(i;*(p+i)!=' ';i++);
+        }
+    }
+    return t;
 }
+int main()
+{
+    char arr[100];
+    gets(arr);
+    int t=countwords(&arr[0]);
+    printf("%d",t);
+    return 0;
+}*/
+/*#include<stdio.h>
+void countwords(char* p)
+{
+    int t=0;
+    while(*p!='\0')
+    {
+        if(*p!=' ')
+        {
+            while(*p!=' ')p++;
+            t++;
+        }
+        p++;
+    }
+    printf("%d",t);
+}
+int main()
+{
+    char arr[100];
+    fgets(arr,100,stdin);
+    countwords(arr);
+    return 0;
+}
+*/
