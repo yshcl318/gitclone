@@ -81,7 +81,7 @@ int main()
         printf("最后得分:%.3f分.",1.000*sum/(20-j));
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     int n,i,j,x=0,y=0;
@@ -103,5 +103,31 @@ int main()
         }
     }
     printf("%d %d",x,y);
+    return 0;
+}*/
+#include<stdio.h>
+int main()
+{
+    int m,n,i=0,j=0;
+    scanf("%d %d",&m,&n);
+    int arr[m][n];
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&arr[i][j]);
+
+        }
+    }
+    int max=arr[0][0],min=arr[0][0];
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+           max=max>arr[i][j]?max:arr[i][j];
+           min=min<arr[i][j]?min:arr[i][j];
+        }
+    }
+    printf("%d",max-min);
     return 0;
 }
