@@ -29,7 +29,7 @@ int main()
     }
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     int s[10],i;
@@ -49,4 +49,35 @@ int main()
         if(i<9)
             printf(",");
     }
+    return 0;
+}*/
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int s[20],i,sum=0,j=0;
+    float aver=0;
+    for(i=0;i<20;i++)
+    {
+        scanf("%d",&s[i]);
+        sum+=s[i];
+    }
+    aver=sum/20.000;
+    printf("所有评委平均分:%.3f分.\n",aver);
+    printf("不合格得分:");
+    for(i=0;i<20;i++)
+    {
+        if(fabsf(aver-s[i])>10)
+        {
+            printf("%d ",s[i]);
+            sum-=s[i];
+            j++;
+        }
+    }
+    printf(".\n");
+    if(j==20)
+        printf("无合格打分.\n");
+    else
+        printf("最后得分:%.3f分.",1.000*sum/(20-j));
+    return 0;
 }
