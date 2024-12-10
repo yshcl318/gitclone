@@ -469,3 +469,34 @@ int main()
     return 0;
 }
 */
+#include<stdio.h>
+
+void countwords(char* p) {
+    int t = 0;
+    int in_word = 0; // 用于标记是否处于单词中
+
+    while(*p != '\0') {
+        if(*p != ' ') { // 当前字符不是空格
+            if (!in_word) { // 如果之前不在单词中
+                in_word = 1; // 标记现在处于单词中
+                t++; // 单词计数加一
+            }
+        } else {
+            in_word = 0; // 遇到空格，标记不在单词中
+        }
+        p++; // 移动指针到下一个字符
+    }
+    printf("%d", t);
+}
+
+int main() {
+    char arr[100];
+    fgets(arr, 100, stdin);
+    // 去除fgets读入的换行符
+    size_t len = strlen(arr);
+    if(len > 0 && arr[len - 1] == '\n') {
+        arr[len - 1] = '\0';
+    }
+    countwords(arr);
+    return 0;
+}
