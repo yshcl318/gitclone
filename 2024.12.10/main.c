@@ -51,7 +51,7 @@ int main()
     }
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 #include<math.h>
 int main()
 {
@@ -79,5 +79,29 @@ int main()
         printf("无合格打分.\n");
     else
         printf("最后得分:%.3f分.",1.000*sum/(20-j));
+    return 0;
+}*/
+#include<stdio.h>
+int main()
+{
+    int n,i,j,x=0,y=0;
+    scanf("%d",&n);
+    int arr[n][n];
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(i<=j)x+=arr[i][j];
+            if(i>=j)y+=arr[i][j];
+        }
+    }
+    printf("%d %d",x,y);
     return 0;
 }
