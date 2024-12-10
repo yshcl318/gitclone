@@ -344,7 +344,7 @@ int main()
         }
     return 0;
 }*/
-#include<stdio.h>
+/*#include<stdio.h>
 void swap(int* a,int* b)
 {
     if(*a>*b)
@@ -371,5 +371,39 @@ int main()
     for(i=0;i<n;i++)
         scanf("%d",&a[i]);
     sort(&a[0],n);
+    return 0;
+}
+*/
+#include<stdio.h>
+void swap(int* a,int* b)
+{
+    if(*a>*b)
+    {
+        int t=*a;
+        *a=*b;
+        *b=t;
+    }
+}
+void sort(int* p,int n,int a)
+{
+    int i=0,j=0;
+    for(i=0;i<n;i++)
+        for(j=0;j<n-i-1;j++)
+            swap(&*(p+j),&*(p+j+1));
+    if(a)
+        for(i=0;i<n;i++)
+            printf("%d ",*(p+i));
+    else
+        for(i=n-1;i>=0;i--)
+            printf("%d ",*(p+i));
+}
+int main()
+{
+    int n,i;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    sort(&a[0],n,1);
     return 0;
 }
