@@ -168,7 +168,7 @@ int main()
     return 0;
 }
 */
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
     int m,n,p,i,j,k;
@@ -195,6 +195,46 @@ int main()
             if(j<p-1)
                 printf(" ");
 
+        }
+        printf("\n");
+    }
+    return 0;
+}*/
+#include<stdio.h>
+int main()
+{
+    int n,i,j,k=0;
+    scanf("%d",&n);
+    int a[n][n];
+    for(i=0;i<n;i+=2)
+    {
+         for(j=0;j<n;j++)
+        {
+            k++;
+            a[i][j]=k;
+        }
+        k+=15;
+    }
+    k=15;
+    for(i=1;i<n;i+=2)
+    {
+         for(j=n-1;j>=0;j--)
+        {
+            k++;
+            a[i][j]=k;
+        }
+        k+=15;
+    }
+    for(i=0;i<n;i++)
+    {
+         for(j=0;j<n;j++)
+        {
+            if(a[i][j]<10)
+                printf("00%d ",a[i][j]);
+            else if(a[i][j]<100)
+                printf("0%d ",a[i][j]);
+            else
+                printf("%d ",a[i][j]);
         }
         printf("\n");
     }
