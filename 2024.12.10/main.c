@@ -501,7 +501,7 @@ int main() {
     return 0;
 }
 */
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 
 // 检查子串 t 是否在 s 的位置 pos 开始
@@ -553,4 +553,36 @@ int main() {
     findPositions(s, t);
 
     return 0;
+}
+*/
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char s[100],t[100];
+    fgets(s,100,stdin);
+    fgets(t,100,stdin);
+    int lens=strlen(s);
+    int lent=strlen(t);
+    int i=0,j=0,a=0,b=0;
+    for(i=0;s[i]!='\0';i++)
+    {
+        a=0;
+        for(j=0;t[j]!='\0';j++)
+        {
+            if(s[i+j]==t[j])
+            {
+                a++;
+            }
+            b++;
+        }
+        if(a==lent)
+        {
+            printf("%d\n",i);
+            b-=a;
+        }
+    }
+    if(b==lens*lent)
+        printf("-1");
+        return 0;
 }
