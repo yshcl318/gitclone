@@ -559,7 +559,7 @@ int main() {
 #include<string.h>
 int main()
 {
-    char s[100],t[100];
+    char s[100],t[100]£»
     fgets(s,100,stdin);
     fgets(t,100,stdin);
     int lens=strlen(s);
