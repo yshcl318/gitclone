@@ -34,7 +34,7 @@ int main()
 {
     int N,M,a=0;
     scanf("%d %d",&N,&M);
-    int i=0,j=0;
+    int i=0,j=0,k,g;
     int* arr1 = (int*)malloc(M * sizeof(int));
     int* arr2 = (int*)malloc(M * sizeof(int));
     if (arr1 == NULL || arr2 == NULL)
@@ -45,9 +45,13 @@ int main()
     for(i=0;i<M;i++)
         scanf("%d %d",&arr1[i],&arr2[i]);
     for(i=1;i<=N;i++)
+    {
         for(j=1;j<=N;j++)
-            for(int k=1;k<=N;k++)
-                for(int g=1;g<=N;g++)
+        {
+            for(k=1;k<=N;k++)
+            {
+                for(g=1;g<=N;g++)
+                {
                     if(i!=k&&i!=j&&j!=k&&j!=g&&k!=g)
                     {
                         if(ch(i,j,arr1,arr2,M))
@@ -55,6 +59,10 @@ int main()
                                 if(ch(k,g,arr1,arr2,M))
                                     a++;
                     }
+                }
+            }
+        }
+    }
     printf("%d",a);
     free(arr1);
     free(arr2);
